@@ -4,7 +4,8 @@
 
 :root {
     /* --primary-color: #2563EB; */
-    --primary-color: #1DA1F2;
+    /* --primary-color: #1DA1F2; */
+    --primary-color: black;
     --secondary-color: white;
     --dark-grey: #6B7280;
     --off-white: #F3F4F6;
