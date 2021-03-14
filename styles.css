@@ -41,6 +41,30 @@ ul, li {
     padding-inline-start: 0;
 }
 
+.bold {
+    font-weight: bold;
+}
+
+.x-small {
+    font-size: 0.6em;
+}
+
+.small {
+    font-size: 0.8em;
+}
+
+.medium {
+    font-size: 1em;
+}
+
+.large {
+    font-size: 1.3em;
+}
+
+.x-large {
+    font-size: 1.7em
+}
+
 body {
     margin: 0;
 }
@@ -89,6 +113,28 @@ body {
     border-radius: var(--border-radius-m);
     padding: var(--padding-xs) var(--padding-l);
     margin: var(--margin-s);
+    cursor: pointer;
+}
+
+.btn-classic {
+    border: 1px solid var(--btn-border-color);
+    background-color: var(--btn-bg-color);
+    color: var(--btn-txt-color);
+    padding: var(--padding-m) var(--padding-l);
+    margin: var(--margin-s);
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.btn-modern {
+    border: 1px solid var(--btn-border-color);
+    background-color: var(--btn-bg-color);
+    color: var(--btn-txt-color);
+    padding: var(--padding-m) var(--padding-xl);
+    margin: var(--margin-s);
+    border-radius: 7em;
+    cursor: pointer;
+
 }
 
 .alert {
