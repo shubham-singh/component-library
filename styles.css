@@ -18,6 +18,9 @@
     --primary-color: black;
     --secondary-color: white;
     
+    --shadow-color: #9CA3AF;
+    --glow-color: blue;
+
     --dark-grey: #6B7280;
     --off-white: #F3F4F6;
     
@@ -46,6 +49,9 @@
     --btn-bg-color: var(--primary-color);
     --btn-border-color: var(--secondary-color);
     --btn-txt-color: var(--secondary-color);
+
+    --card-width: 280px;
+    --card-height: 420px;
 }
 
 ul, li {
@@ -108,34 +114,83 @@ body {
     outline: none;
 }
 
-.btn-classic {
-    /* border: none; */
-    border: 1px solid var(--btn-border-color);
+.avatar {
+    border-radius: 50%;
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.top {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    /* top: -50%;
+    right: -50%; */
+    top: -20px;
+    right: -10px;
+}
+
+.bottom {
+    bottom: 7%;
+    right: 10%;
+    border: 2px solid white;
+}
+
+.online{
+    background-color: green;
+}
+
+.offline {
+    background-color: red;
+}
+
+.shadow {
+    box-shadow: 0.3em 0.5em 1em var(--shadow-color);
+}
+
+.glow {
+    box-shadow: 0 0 1em var(--glow-color);
+}
+
+.btn {
+    border: none;
+    /* border: 1px solid var(--btn-border-color); */
     background-color: var(--btn-bg-color);
     color: var(--btn-txt-color);
-    padding: var(--padding-m) var(--padding-l);
+    padding: var(--padding-m) var(--padding-xl);
     margin: var(--margin-xs);
-    border-radius: var(--border-radius-xs);
     cursor: pointer;
     outline: none;
 }
 
 .btn-modern {
-    /* border: none; */
-    border: 1px solid var(--btn-border-color);
-    background-color: var(--btn-bg-color);
-    color: var(--btn-txt-color);
-    padding: var(--padding-m) var(--padding-xl);
-    margin: var(--margin-xs);
     border-radius: var(--border-radius-l);
-    cursor: pointer;
-    outline: none;
+}
+
+.btn-classic{
+    border-radius: var(--border-radius-xs);
 }
 
 .btn-transparent:hover, .btn-classic:hover, .btn-modern:hover {
-    border: 1px solid var(--btn-bg-color);
+    /* border: 1px solid var(--btn-border-color); */
+    /* border: 1px solid var(--btn-txt-color); */
     background: var(--btn-txt-color);
     color: var(--btn-bg-color);
+}
+
+.secondary:hover {
+    /* border: 1px solid var(--btn-txt-color); */
+    /* border: 1px solid var(--btn-border-color); */
+    background: var(--btn-bg-color);
+    color: var(--btn-txt-color);
 }
 
 
@@ -143,16 +198,67 @@ body {
     text-align: center;
     position: fixed;
     bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-    width: 90%;
+    left: 0;
+    right: 0;
     margin-bottom: var(--margin-xs);
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
     padding: var(--padding-sm);
     background-color: var(--nav-bg-color);
     color: var(--nav-txt-color);
 }
 
 
+.card {
+    /* display: flex; */
+    display: inline-block;
+    position: relative;
+    width: var(--card-width);
+    height: var(--card-height);
+    margin: var(--margin-m);
+}
+
+.img-card {
+    max-width: 100%;
+}
+
+.content-card {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    width: 90%;
+    bottom: 5%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--padding-xs);
+}
+
+.card-modern {
+    border-radius: var(--border-radius-s);
+}
+
+.card-classic {
+    border: 1px solid black;
+}
+
+.card-text {
+    display: inline-flex;
+    flex-direction: column;
+    /* padding: var(--padding-xl); */
+    background: linear-gradient(to right bottom, white, pink);
+}
+
+.secondary {
+    /* border: 1px solid var(--btn-border-color); */
+    background-color: var(--btn-txt-color);
+    color: var(--btn-bg-color);
+}
 @media screen and (min-width: 768px)
 {
     .nav-classic{
@@ -174,6 +280,17 @@ body {
     }
 }
 
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.inline {
+    display: inline-block;
+}
 
 .bold {
     font-weight: bold;
